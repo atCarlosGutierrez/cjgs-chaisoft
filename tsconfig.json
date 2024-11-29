@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "types": ["chai", "mocha"],
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "esModuleInterop": true
+  },
+  "include": ["./chai-soft-assertion.ts"]
+}
