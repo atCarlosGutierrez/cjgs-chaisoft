@@ -1,6 +1,5 @@
 # Chai Soft Assertion
 
-==========================
 This package extends [Chai](http://chaijs.com/) library to handle soft assertions by including a "soft" property flag
 
 ## Instalation
@@ -47,3 +46,6 @@ Executing Hard assertion equal
 
   1 passing
 ```
+# Supported Methods
+
+- equal, containSubset, include, contain
