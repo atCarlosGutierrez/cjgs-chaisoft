@@ -1,4 +1,4 @@
-import chai = require("chai");
+import * as chai from "chai";
 
 const softMethods = ["equal", "containSubset"];
 const softChainableMethods = ["include", "contain"];
@@ -64,4 +64,4 @@ function softAssertion(_chai, utils) {
   });
 }
 
-export = softAssertion as Chai.ChaiPlugin;
+export default softAssertion as Chai.ChaiPlugin;
