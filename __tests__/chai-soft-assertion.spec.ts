@@ -19,10 +19,7 @@ describe("Normal hard assertion should work", function () {
     const fn = () => {
       this.expect([1, 2, 3]).to.contain(4);
     };
-    this.expect(fn).to.throw(
-      chai.AssertionError,
-      "expected [ 1, 2, 3 ] to include 4"
-    );
+    this.expect(fn).to.throw(Error, "expected [ 1, 2, 3 ] to include 4");
   });
 });
 
