@@ -1,4 +1,4 @@
-import * as chai from "chai";
+import chai from "chai";
 import { beforeEach, describe } from "mocha";
 import softAssertion from "../dist/chai-soft-assertion";
 
