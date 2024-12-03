@@ -1,6 +1,7 @@
 import * as chai from "chai";
 import { beforeEach, describe } from "mocha";
 import softAssertion from "../dist/chai-soft-assertion";
+import { AssertionError } from "chai";
 
 beforeEach(function () {
   chai.use(softAssertion);
@@ -12,7 +13,7 @@ describe("Normal hard assertion should work", function () {
     const fn = () => {
       this.expect(1).to.equal(2);
     };
-    this.expect(fn).to.throw(chai.AssertionError, "expected 1 to equal 2");
+    this.expect(fn).to.throw(AssertionError, "expected 1 to equal 2");
   });
 
   it("Should throw include error", function () {
