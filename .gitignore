@@ -1,2 +1,4 @@
 node_modules/
 dist/chai-soft-assertion.js
+esm/*
+cjs/*

@@ -1,8 +1,6 @@
 {
   "extension": ["ts"],
-  "spec": "*/**/*.spec.ts",
-  "require": ["ts-node/register"],
-  "node-option": ["loader=ts-node/esm"],
-  "reporter": "dot",
-  "recursive": true
+  "reporter": "spec",
+  "loader": "ts-node/esm",
+  "spec": ["__tests__/**/*.spec.ts"]
 }

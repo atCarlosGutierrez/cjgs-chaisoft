@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "types": ["chai", "mocha"],
+    "skipLibCheck": true,
+    "outDir": "./esm",
+    "esModuleInterop": true
+  },
+  "include": ["src/chai-soft-assertion.ts"]
+}
