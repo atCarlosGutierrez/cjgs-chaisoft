@@ -1,6 +1,6 @@
 # Chai Soft Assertion
 
-[![build](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions/workflows/build.yaml/badge.svg)](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions)
+[![build](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions)
 
 This package extends [Chai](http://chaijs.com/) library to handle soft assertions by including a "soft" property flag
 
