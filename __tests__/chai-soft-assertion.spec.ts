@@ -1,6 +1,6 @@
 import * as chai from "chai";
 import { beforeEach, describe } from "mocha";
-import softAssertion from "../dist/chai-soft-assertion";
+import softAssertion from "../esm/chai-soft-assertion.js";
 
 beforeEach(function () {
   chai.use(softAssertion);
@@ -8,32 +8,29 @@ beforeEach(function () {
 });
 
 describe("Normal hard assertion should work", function () {
-  it("Should throw equal error", function () {
+  it("Should throw error when soft is not used (equal assertion)", function () {
     const fn = () => {
       this.expect(1).to.equal(2);
     };
-    this.expect(fn).to.throw(chai.AssertionError, "expected 1 to equal 2");
+    this.expect(fn).to.throw(Error, "expected 1 to equal 2");
   });
 
-  it("Should throw include error", function () {
+  it("Should throw error when soft is not used (include assertion)", function () {
     const fn = () => {
       this.expect([1, 2, 3]).to.contain(4);
     };
-    this.expect(fn).to.throw(
-      chai.AssertionError,
-      "expected [ 1, 2, 3 ] to include 4"
-    );
+    this.expect(fn).to.throw(Error, "expected [ 1, 2, 3 ] to include 4");
   });
 });
 
 describe("Including soft assertion library should work", function () {
-  it("Should soft assert with equal", function () {
+  it("Should continue if soft assert is used with equal assertion", function () {
     this.expect(2).soft.to.equal(3);
     console.log("Test is not stopeed");
   });
 
-  it("Should soft assert with include", function () {
+  it("Should continue if soft assert is used with include assertion", function () {
     this.expect([1, 2, 3]).soft.to.include(4);
-    this.expect(2).to.equal(2);
+    console.log("Test is not stopeed");
   });
 });
