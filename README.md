@@ -14,12 +14,12 @@ Use as a chai plugin:
 
 ```js
 //Depending on the chai version you are using
-//Chai Common JS (4.)
+//Chai Common JS (4.X)
 import chai = require("chai");
 import softAssertion = require("@cjgs/chai-soft-assert");
 
 //or
-//Chai ESM (5.)
+//Chai ESM (5.X)
 import * as chai from "chai";
 import softAssertion from "@cjgs/chai-soft-assert";
 
@@ -33,7 +33,7 @@ expect([1, 2, 3]).soft.to.contain(4);
 expect(2).to.equal(2)
 ```
 
-When using the soft flag, assertion will be executed normally but the failure will be handled internalyl and
+When using the soft flag, assertion will be executed normally but the failure will not pop-up an error and
 wont stop any sequent assertion or process.
 
 Outcome of the previous code block:
