@@ -1,3 +1,5 @@
+/// <reference types="chai" />
+
 declare global {
   namespace Chai {
     interface Assertion {
@@ -7,4 +9,4 @@ declare global {
 }
 
 declare const softAssertion: Chai.ChaiPlugin;
-export = softAssertion;
+export default softAssertion;
