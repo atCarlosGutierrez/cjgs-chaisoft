@@ -1,5 +1,5 @@
 {
-  "name": "@cjgs/chai-soft-assert",
+  "name": "chai-soft-assert",
   "version": "0.0.2",
   "type": "module",
   "description": "Chai helper to include soft assertions on chai package",
