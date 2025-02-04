@@ -1,0 +1,5 @@
+node_modules/
+src/*
+__tests__/*
+.mocharc.json
+.github/*
