@@ -1,6 +1,6 @@
 {
   "name": "chai-soft-assert",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "Chai helper to include soft assertions on chai package",
   "exports": {

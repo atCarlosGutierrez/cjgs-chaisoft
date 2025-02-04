@@ -3,3 +3,6 @@ src/*
 __tests__/*
 .mocharc.json
 .github/*
+tsconfig.json
+tsconfig-cjs.json
+tsconfig-esm.json
