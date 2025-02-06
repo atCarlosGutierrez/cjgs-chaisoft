@@ -1,16 +1,12 @@
 {
   "name": "chai-soft-assert",
-  "version": "0.0.4",
-  "type": "module",
+  "version": "0.0.5",
   "description": "Chai helper to include soft assertions on chai package",
   "exports": {
-    "require": {
-      "types": "./types/chai-soft-assertion.d.ts",
-      "default": "./cjs/chai-soft-assertion.js"
-    },
-    "import": {
-      "types": "./types/chai-soft-assertion.d.ts",
-      "default": "./esm/chai-soft-assertion.js"
+    ".": {
+      "require": "./cjs/chai-soft-assertion.js",
+      "import": "./esm/chai-soft-assertion.mjs",
+      "types": "./types/chai-soft-assertion.d.ts"
     }
   },
   "scripts": {
@@ -42,9 +38,7 @@
     "chai": "^5.1.2"
   },
   "devDependencies": {
-    "@types/chai-subset": "^1.3.5",
     "@types/mocha": "^10.0.10",
-    "chai-subset": "^1.6.0",
     "mocha": "^10.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"

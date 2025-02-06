@@ -6,7 +6,7 @@ This package extends [Chai](http://chaijs.com/) library to handle soft assertion
 
 ## Instalation
 
-You can use `npm install --save-dev @cjgs/chai-soft-assert`
+You can use `npm install --save-dev chai-soft-assert`
 
 ## Usage
 
