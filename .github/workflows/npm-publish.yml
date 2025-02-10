@@ -17,6 +17,8 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+      - name: Rename file
+        run: mv esm/chai-soft-assertion.js esm/chai-soft-assertion.mjs
       - run: npm test
 
   publish-npm:
