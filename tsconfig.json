@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "module": "ESNext",
-    "types": ["chai", "mocha"]
-  },
-  "include": ["src/*.ts"]
-}

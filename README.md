@@ -16,7 +16,7 @@ Use as a chai plugin:
 //Depending on the chai version you are using
 //Chai Common JS (4.X)
 import chai = require("chai");
-import softAssertion = require("chai-soft-assert");
+import softAssertion = require("chai-soft-assert").default;
 
 //or
 //Chai ESM (5.X)

@@ -10,8 +10,8 @@
     }
   },
   "scripts": {
-    "test": "mocha",
-    "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json"
+    "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
+    "test": "npm run test -w esm-tests && npm run test -w cjs-tests"
   },
   "repository": {
     "type": "git",
@@ -29,17 +29,16 @@
   ],
   "author": "Carlos Javier Gutierrez Sanjines cgutierrezsanjines@gmail.com",
   "license": "MIT",
+  "workspaces": [
+    "/esm-tests",
+    "/cjs-tests",
+    "."
+  ],
   "bugs": {
     "url": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/issues"
   },
   "homepage": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/tree/readme#readme",
-  "dependencies": {
-    "@types/chai": "^5.0.1",
-    "chai": "^5.1.2"
-  },
   "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "mocha": "^10.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
