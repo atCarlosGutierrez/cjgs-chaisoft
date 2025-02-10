@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "types": ["chai", "mocha"],
     "skipLibCheck": true,
     "outDir": "./cjs",
     "esModuleInterop": true
