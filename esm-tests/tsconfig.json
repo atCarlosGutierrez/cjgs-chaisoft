@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "types": ["chai"]
+  },
+  "include": ["chai-soft-assertion.spec.ts"]
+}

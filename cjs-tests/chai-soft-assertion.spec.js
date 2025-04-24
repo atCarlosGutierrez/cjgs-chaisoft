@@ -1,6 +1,5 @@
-import * as chai from "chai";
-import { beforeEach, describe } from "mocha";
-import softAssertion from "../esm/chai-soft-assertion.js";
+let chai = require("chai");
+let softAssertion = require("../cjs/chai-soft-assertion.js").default;
 
 beforeEach(function () {
   chai.use(softAssertion);

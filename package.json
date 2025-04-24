@@ -1,21 +1,17 @@
 {
-  "name": "@cjgs/chai-soft-assert",
-  "version": "0.0.2",
-  "type": "module",
+  "name": "chai-soft-assert",
+  "version": "0.0.5",
   "description": "Chai helper to include soft assertions on chai package",
   "exports": {
-    "require": {
-      "types": "./types/chai-soft-assertion.d.ts",
-      "default": "./cjs/chai-soft-assertion.js"
-    },
-    "import": {
-      "types": "./types/chai-soft-assertion.d.ts",
-      "default": "./esm/chai-soft-assertion.js"
+    ".": {
+      "require": "./cjs/chai-soft-assertion.js",
+      "import": "./esm/chai-soft-assertion.mjs",
+      "types": "./types/chai-soft-assertion.d.ts"
     }
   },
   "scripts": {
-    "test": "mocha",
-    "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json"
+    "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
+    "test": "npm run test -w esm-tests && npm run test -w cjs-tests"
   },
   "repository": {
     "type": "git",
@@ -33,20 +29,20 @@
   ],
   "author": "Carlos Javier Gutierrez Sanjines cgutierrezsanjines@gmail.com",
   "license": "MIT",
+  "workspaces": [
+    "/esm-tests",
+    "/cjs-tests",
+    "."
+  ],
   "bugs": {
     "url": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/issues"
   },
   "homepage": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/tree/readme#readme",
-  "dependencies": {
-    "chai": "^5.1.2",
-    "@types/chai": "^5.0.1"
-  },
   "devDependencies": {
-    "@types/chai-subset": "^1.3.5",
-    "chai-subset": "^1.6.0",
-    "@types/mocha": "^10.0.10",
-    "mocha": "^10.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/chai": "^5.0.1"
   }
 }

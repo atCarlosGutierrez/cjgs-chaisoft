@@ -1,0 +1,7 @@
+node_modules/
+src/*
+__tests__/*
+.mocharc.json
+.github/*
+tsconfig-cjs.json
+tsconfig-esm.json

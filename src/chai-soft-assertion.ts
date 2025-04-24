@@ -1,11 +1,9 @@
-import * as chai from "chai";
-
 const softMethods = ["equal", "containSubset"];
 const softChainableMethods = ["include", "contain"];
 
 const flagName = "soft";
 
-function softAssertion(_chai, utils) {
+function softAssertion(chai, utils) {
   //Creates flag to identify when soft asssertion is used
   utils.addProperty(chai.Assertion.prototype, "soft", function () {
     utils.flag(this, flagName, true);
