@@ -40,14 +40,11 @@ describe("Including soft assertion library should work", function () {
   });
 });
 
-describe.only("Is possible to extend soft assertion methods", function () {
+describe("Is possible to extend soft assertion methods", function () {
   it("Should do hard assertion if soft assert is used with a non included method", function () {
     //lengthOf is not included in the soft assertion library
-    const fn = () => this.expect(5).to.be.within(1, 3);;
-    this.expect(fn).to.throw(
-      Error,
-      "expected 5 to be within 1..3"
-    );
+    const fn = () => this.expect(5).to.be.within(1, 3);
+    this.expect(fn).to.throw(Error, "expected 5 to be within 1..3");
   });
 
   it("Should be possible to extend soft assertion methods", function () {
