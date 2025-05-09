@@ -1,6 +1,8 @@
 # Chai Soft Assertion
 
 [![build](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/atCarlosGutierrez/cjgs-chaisoft/actions)
+[![ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/carlosjaviergutierrezsanjines)
+[![github](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/atCarlosGutierrez)
 
 This package extends [Chai](http://chaijs.com/) library to handle soft assertions by including a "soft" property flag
 
@@ -71,4 +73,4 @@ chai.use(createSoftAssertion(getSoftMethods(), getSoftChainableMethods()));
 ```
 
 > **Warning**  
-Chai differentiates between chainable and non-chainable methods, be carefull which function to use 'addSoftChainableMethod' or 'addSoftMethod' to include new methods
+> Chai differentiates between chainable and non-chainable methods, be carefull which function to use 'addSoftChainableMethod' or 'addSoftMethod' to include new methods
