@@ -1,6 +1,6 @@
 {
   "name": "chai-soft-assert",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Chai helper to include soft assertions on chai package",
   "exports": {
     ".": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atCarlosGutierrez/cjgs-chaisoft.git#readme"
+    "url": "git+https://github.com/atCarlosGutierrez/cjgs-chaisoft.git"
   },
   "keywords": [
     "chai",
@@ -37,7 +37,7 @@
   "bugs": {
     "url": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/issues"
   },
-  "homepage": "https://github.com/atCarlosGutierrez/cjgs-chaisoft/tree/readme#readme",
+  "homepage": "https://github.com/atCarlosGutierrez/cjgs-chaisoft",
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
