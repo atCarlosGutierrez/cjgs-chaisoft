@@ -70,4 +70,5 @@ addSoftChainableMethod("a");
 chai.use(createSoftAssertion(getSoftMethods(), getSoftChainableMethods()));
 ```
 
-\*Caution: Chai differentiates between chainable and non-chainable methods, be carefull where to include the new methods using 'addSoftChainableMethod' or 'addSoftMethod'
+> **Warning**  
+Chai differentiates between chainable and non-chainable methods, be carefull which function to use 'addSoftChainableMethod' or 'addSoftMethod' to include new methods
