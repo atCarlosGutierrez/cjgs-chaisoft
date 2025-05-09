@@ -1,6 +1,11 @@
 import * as chai from "chai";
 import { beforeEach, describe } from "mocha";
-import softAssertion from "../esm/chai-soft-assertion.mjs";
+import {
+  softAssertion,
+  addSoftMethod,
+  getSoftMethods,
+  createSoftAssertion,
+} from "../esm/chai-soft-assertion.mjs";
 
 beforeEach(function () {
   chai.use(softAssertion);
@@ -32,5 +37,23 @@ describe("Including soft assertion library should work", function () {
   it("Should continue if soft assert is used with include assertion", function () {
     this.expect([1, 2, 3]).soft.to.include(4);
     console.log("Test is not stopeed");
+  });
+});
+
+describe.only("Is possible to extend soft assertion methods", function () {
+  it("Should do hard assertion if soft assert is used with a non included method", function () {
+    //lengthOf is not included in the soft assertion library
+    const fn = () => this.expect(5).to.be.within(1, 3);;
+    this.expect(fn).to.throw(
+      Error,
+      "expected 5 to be within 1..3"
+    );
+  });
+
+  it("Should be possible to extend soft assertion methods", function () {
+    addSoftMethod("within");
+    chai.use(createSoftAssertion(getSoftMethods()));
+    this.expect = chai.expect;
+    this.expect(5).soft.to.be.within(1, 3);
   });
 });
