@@ -4,8 +4,6 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "outDir": "./cjs",
-    "declaration": false,
-    "declarationDir": "./types",
     "esModuleInterop": true,
     "skipLibCheck": true
   },

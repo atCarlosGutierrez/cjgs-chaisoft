@@ -4,8 +4,6 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./esm",
-    "declaration": false,
-    "declarationDir": "./types",
     "esModuleInterop": true,
     "skipLibCheck": true
   },
