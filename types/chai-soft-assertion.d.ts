@@ -8,5 +8,9 @@ declare global {
   }
 }
 
-declare const softAssertion: Chai.ChaiPlugin;
-export default softAssertion;
+export declare function addSoftMethod(softMethod: string | string[]): void;
+export declare function getSoftMethods(): string[];
+export declare function addSoftChainableMethod(softChainableMethod: string | string[]): void;
+export declare function getSoftChainableMethods(): string[];
+export declare function createSoftAssertion(newSoftMethods?: string[], newSoftChainableMethods?: string[]): Chai.ChaiPlugin;
+export declare const softAssertion: Chai.ChaiPlugin;

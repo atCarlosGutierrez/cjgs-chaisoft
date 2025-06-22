@@ -1,5 +1,6 @@
-let softMethods = ["equal", "members", "property", "above", "below", "keys"];
-let softChainableMethods = ["include", "contain", "a", "an", "lengthOf"];
+/* eslint-disable prefer-rest-params */
+const softMethods = ["equal", "members", "property", "above", "below", "keys"];
+const softChainableMethods = ["include", "contain", "a", "an", "lengthOf"];
 
 export function addSoftMethod(softMethod: string | string[]) {
   if (Array.isArray(softMethod)) {

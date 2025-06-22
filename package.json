@@ -1,6 +1,6 @@
 {
   "name": "chai-soft-assert",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chai helper to include soft assertions on chai package",
   "exports": {
     ".": {
@@ -44,5 +44,12 @@
   },
   "dependencies": {
     "@types/chai": "^5.0.1"
-  }
+  },
+  "maintainers": [
+    {
+      "name": "Carlos Gutierrez Sanjines",
+      "email": "cgutierrezsanjines@gmail.com",
+      "url": "https://github.com/atCarlosGutierrez"
+    }
+  ]
 }
