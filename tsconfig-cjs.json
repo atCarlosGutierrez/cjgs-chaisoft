@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "target": "ES2015",
     "module": "CommonJS",
-    "skipLibCheck": true,
+    "moduleResolution": "Node",
     "outDir": "./cjs",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": ["src/chai-soft-assertion.ts"]
 }
