@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
-    "test": "npm run test -w esm-tests && npm run test -w cjs-tests"
+    "test": "npm run test -w esm-tests && npm run test -w cjs-tests",
+    "rename-outputs": "node ./rename-outputs.js"
   },
   "repository": {
     "type": "git",
