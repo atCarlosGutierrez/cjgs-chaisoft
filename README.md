@@ -20,8 +20,8 @@ Use as a chai plugin:
 ```js
 //Depending on the chai version you are using
 //Chai Common JS (4.X)
-import chai = require("chai");
-import softAssertion = require("chai-soft-assert").default;
+const chai = require("chai");
+const {softAssertion} = require("chai-soft-assert");
 
 //or
 //Chai ESM (5.X)
