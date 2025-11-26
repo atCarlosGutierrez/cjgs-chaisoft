@@ -2,6 +2,44 @@
 const softMethods = ["equal", "members", "property", "above", "below", "keys"];
 const softChainableMethods = ["include", "contain", "a", "an", "lengthOf"];
 
+interface SoftError {
+  matcher: string;
+  message: string;
+  actual?: unknown;
+  expected?: unknown;
+}
+
+class SoftAssertionsCollector {
+  public errors: SoftError[] = [];
+
+  add(error: SoftError) {
+    this.errors.push(error);
+  }
+
+  assertAll() {
+    if (this.errors.length > 0) {
+      const message = this.errors
+        .map(
+          (e, i) =>
+            `#${i + 1} [${e.matcher}]: ${e.message}` +
+            (e.actual !== undefined && e.expected !== undefined
+              ? `\n  Actual: ${JSON.stringify(
+                  e.actual
+                )}\n  Expected: ${JSON.stringify(e.expected)}`
+              : "")
+        )
+        .join("\n\n");
+      throw new Error(`Soft assertion failures:\n\n${message}`);
+    }
+  }
+
+  clear() {
+    this.errors = [];
+  }
+}
+
+export const softAssertionsCollector = new SoftAssertionsCollector();
+
 export function addSoftMethod(softMethod: string | string[]) {
   if (Array.isArray(softMethod)) {
     softMethods.push(...softMethod);
@@ -49,9 +87,12 @@ export function createSoftAssertion(
               try {
                 _super.apply(this, arguments);
               } catch (error) {
-                console.log("Soft error on", method, " assertion");
-                console.log("Message:", error.message);
-                console.log("Actual:", error.actual, "Expected:", value);
+                softAssertionsCollector.add({
+                  matcher: method,
+                  message: error.message,
+                  actual: error.actual,
+                  expected: value,
+                });
               }
             } else {
               _super.apply(this, arguments);
@@ -72,9 +113,12 @@ export function createSoftAssertion(
               try {
                 _super.apply(this, arguments);
               } catch (error) {
-                console.log("Soft error on", method, " assertion");
-                console.log("Message:", error.message);
-                console.log("Actual:", error.actual, "Expected:", value);
+                softAssertionsCollector.add({
+                  matcher: method,
+                  message: error.message,
+                  actual: error.actual,
+                  expected: value,
+                });
               }
             } else {
               _super.apply(this, arguments);
